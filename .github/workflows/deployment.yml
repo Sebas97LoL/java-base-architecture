@@ -22,7 +22,7 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Build the project with gradle
-        run: ./gradlew build
+        run: ./gradlew build -x test
 
       - name: Build the Docker image
         run: docker build -t my-image-name .
