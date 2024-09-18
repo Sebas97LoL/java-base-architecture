@@ -1,0 +1,9 @@
+name: Deployment
+run-name: ${{ github.actor }} is doing a deployment
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: docker build -t reference_architecture .
+      - run: docker-compose up -d
